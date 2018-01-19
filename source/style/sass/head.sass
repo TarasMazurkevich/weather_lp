@@ -52,7 +52,7 @@
 .article
 	display: grid
 	grid-auto-flow: column
-	grid-template-columns: 1fr 1fr
+	grid-template-columns: 12fr 1fr 12fr
 
 	width: 100%
 	height: 603px
@@ -127,6 +127,7 @@
 	height: 450px
 
 
+// --- Bbl-card in article
 .bbl-card
 	display: inline-flex
 	align-items: center
@@ -141,6 +142,7 @@
 
 	&-first
 		top: 49%
+		left: 4%
 
 		border-radius: 50%
 		width: 60px
@@ -150,7 +152,7 @@
 
 	&-second
 		top: 19%
-		left: 58%
+		left: 59%
 
 		border-radius: 50%
 		width: 35px
@@ -181,3 +183,21 @@
 		color: #6ca3ff
 
 		background-color: #fcec64
+
+
+// --- Slide-down in article
+.slide-down
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	top: 90%
+
+	border-radius: 50%
+	width: 30px
+	height: 30px
+
+	color: #ff4a4f
+	text-decoration: none
+
+	background-color: #FFF
