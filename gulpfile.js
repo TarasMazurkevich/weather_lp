@@ -67,11 +67,11 @@ gulp.task('js:build', function () {
 /* ------------ Style build ------------- */
 gulp.task('style:build', function () {
     return gulp.src(path.src.style) // Выберем наш main.scss
-        // .pipe(sourcemaps.init()) То же самое что и с js
-        .pipe(sass.sync().on('error', sass.logError)) // Скомпилируем
+        .pipe(sourcemaps.init()) // То же самое что и с js
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) // Скомпилируем
+        .pipe(sourcemaps.write())
         .pipe(prefixer()) // Добавим вендорные префиксы
-        // .pipe(cssmin()) Сожмем
-        // .pipe(sourcemaps.write())
+        .pipe(cssmin()) // Сожмем
         .pipe(gulp.dest(path.build.css)) // И в build
         .pipe(browserSync.reload({stream: true}));
 });
@@ -99,6 +99,11 @@ gulp.task('fonts:build', function() {
 });
 
 
+gulp.task('clean', function del(cb) {
+    return rimraf('build', cb);
+});
+
+
 gulp.task('browser-sync', function(){
     browserSync.init({
         server: "./build",
@@ -111,11 +116,15 @@ gulp.task('browser-sync', function(){
 
 
 gulp.task('watch', function(){
-    gulp.watch(path.watch.style, ['style:build']);
-    gulp.watch(path.watch.template, ['html:build']);
-    gulp.watch(path.watch.js, ['js:build']);
-    gulp.watch(path.watch.img, ['image:build']);
-    gulp.watch(path.watch.fonts, ['fonts:build']);
+    gulp.watch(path.watch.style, gulp.series('style:build'));
+    gulp.watch(path.watch.template, gulp.series('html:build'));
+    gulp.watch(path.watch.js, gulp.series('js:build'));
+    gulp.watch(path.watch.img, gulp.series('image:build'));
+    gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
 });
 
-gulp.task('default', ['browser-sync', 'style:build', 'html:build', 'js:build', 'image:build', 'fonts:build', 'watch']);
+gulp.task('default', gulp.series('clean', 
+            gulp.parallel('style:build', 'html:build', 'js:build', 'image:build', 'fonts:build'),
+            gulp.parallel('watch', 'browser-sync')
+        )
+);
