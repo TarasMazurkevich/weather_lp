@@ -2,3 +2,135 @@
 	margin-top: 100px
 
 
+.screenshots-article
+	@extend .screenshots
+
+
+.screenshots-block
+	display: grid
+	grid-auto-flow: column
+	grid-template-columns: 1fr 1fr
+
+	height: 550px
+
+
+.screenshots-img--bbl
+	@extend .bbl-card
+
+	&:first-of-type
+		z-index: 3
+
+		bottom: 15%
+		left: 17%
+
+		border-radius: 50%
+		width: 60px
+		height: 60px
+
+		font-size: 20px
+
+		background-color: $blue
+
+	&:last-of-type
+		z-index: 3
+
+		bottom: 45%
+		left: 51%
+
+		border-radius: 50%
+		width: 60px
+		height: 60px
+
+		background-color: #fcec64
+
+
+.screenshots-img > img:first-of-type
+	@extend .head-phone
+	position: relative
+	display: inline-block
+	top: 50px
+
+	z-index: 2
+	margin: 0
+	height: 450px
+
+.screenshots-img > img:last-of-type
+	@extend .head-phone
+	display: inline-block
+	left: 410px
+
+	z-index: 1
+	margin: 0
+	height: 550px
+
+
+.screenshots-content
+	display: grid
+	align-content: center
+
+	&:nth-of-type(2)
+		justify-content: end
+
+
+.screenshots-content>img
+	margin-bottom: 50px
+	width: 100px
+
+
+.screenshots-card
+	height: 150px
+
+	&--title
+		@extend .section-title
+
+	&--text
+		@extend .section-text
+
+		margin-top: 20px
+		width: 330px
+
+		color: #000
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 0
+
+
+.screenshots-items
+	@extend .bbl-card
+	align-items: start
+	justify-content: start
+
+	height: 100px
+
+	&--bbl
+		@extend .bbl-card
+		border-radius: 50%
+		width: 40px
+		height: 40px
+
+		color: $mt-color
+
+		box-shadow: 10px 0px 20px -10px gray
+
+	&--bbl:last-of-type
+		text-transform: capitalize
+
+
+#screenshot-text2
+	left: 900px
+
+#screenshot-icon2
+	width: 70px
+
+
+.screenshots-img--bbl.bbl21
+	background-color: #FC6A42
+
+.screenshots-img--bbl.bbl22
+	background-color: #F2A14E
+
+.screenshots-img--bbl.bbl31
+	background-color: #7693C8
+
+.screenshots-img--bbl.bbl32
+	background-color: #B8FAEE
