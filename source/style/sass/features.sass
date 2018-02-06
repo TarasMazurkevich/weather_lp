@@ -39,10 +39,13 @@
 // --- feature content
 .features-content
 	display: grid
-	grid-auto-flow: column
+	grid-template-columns: repeat(3, 1fr)
 	justify-content: space-between
 
 .feature-card
+	display: grid
+	grid-template-columns: 1fr 2fr
+	justify-content: space-between
 	width: 100%
 	
 	&-img
@@ -50,9 +53,6 @@
 
 	&-content
 		display: inline-block
-		
-		margin-left: 20px		
-		width: 200px
 
 	&-title
 		color: $dark-blue

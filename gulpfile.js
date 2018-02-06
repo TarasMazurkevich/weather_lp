@@ -124,7 +124,7 @@ gulp.task('watch', function(){
 });
 
 gulp.task('default', gulp.series('clean', 
-            gulp.parallel('style:build', 'html:build', 'js:build', 'image:build', 'fonts:build'),
-            gulp.parallel('watch', 'browser-sync')
-        )
+        gulp.parallel('style:build', 'html:build', 'js:build', 'image:build', 'fonts:build'),
+        gulp.parallel('watch', 'browser-sync')
+    )
 );

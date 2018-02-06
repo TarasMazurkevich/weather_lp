@@ -56,8 +56,10 @@
 
 .screenshots-img > img:last-of-type
 	@extend .head-phone
+	position: relative
 	display: inline-block
-	left: 410px
+	left: 210px
+	top: -480px
 
 	z-index: 1
 	margin: 0
@@ -67,9 +69,13 @@
 .screenshots-content
 	display: grid
 	align-content: center
+	height: 550px
 
 	&:nth-of-type(2)
 		justify-content: end
+
+.screenshots-img
+	height: 550px
 
 
 .screenshots-content>img
@@ -115,9 +121,6 @@
 	&--bbl:last-of-type
 		text-transform: capitalize
 
-
-#screenshot-text2
-	left: 900px
 
 #screenshot-icon2
 	width: 70px

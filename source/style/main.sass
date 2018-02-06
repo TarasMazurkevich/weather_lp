@@ -10,16 +10,64 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 	padding: 0
 
 .container
-	padding:  
+	margin:  
 		left: 15%
 		right: 15%
 
+// Preloader
+@keyframes spin
+	0%, 100%
+		transform: translate(0)
+	25%
+		transform: translate(160%)
+	50%
+		transform: translate(160%, 160%)
+	75%
+		transform: translate(0, 160%)
+
+.loader
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 100px
+	height: 100px
+
+	hr
+		border: 0
+		margin: 0
+		width: 40%
+		height: 40%
+		position: absolute
+		border-radius: 50%
+		animation: spin 2s ease infinite
+
+	hr:first-child
+		background: #7693C8
+		animation-delay: -1.5s
+	hr:nth-child(2)
+		background: #B5CCD3
+		animation-delay: -1s
+	hr:nth-child(3)
+		background: #B8FAEE
+		animation-delay: -0.5s
+	hr:last-child
+		background: #193B48
+
+	&Area
+		width: 100%
+		height: 100vh
+		background-color: #FFF
+
+
+
+// btn Back-to-Top
 .btn-top
 	z-index: 99
 	display: none
 	position: fixed
 	bottom: 0
-	right: 100px
+	right: 5%
 
 	width: 40px
 	height: 30px
@@ -47,3 +95,123 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 @import sass/download
 // footer.sass
 @import sass/footer
+
+
+@media screen and (min-width: 992px) and (max-width: 1200px)
+	.container
+		margin:  
+			left: 10%
+			right: 10%
+
+	.btn-top
+		right: 2%
+
+	.screenshots-img--bbl
+		&:first-of-type
+			left: 20%
+		&:last-of-type
+			bottom: 46%
+			left: 55%
+
+	.bbl-card
+		&-first
+			left: 10%
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+	.container
+		margin:  
+			left: 10%
+			right: 10%
+
+	#scrn-img-text
+		display: none
+
+	#screenshot-text2
+		display: none
+
+	.menu
+		ul
+			width: 420px
+			font-size: 14px
+
+	@media screen and (min-width: 768px) and (max-width: 940px)
+		.slider-img
+			width: 150px
+
+		.active
+			width: 200px
+	
+	@media screen and (min-width: 768px) and (max-width: 850px)
+		.screenshots-img--bbl
+			&:first-of-type
+				top: 15%
+				bottom: 0
+				left: 0
+
+			&:last-of-type
+				top: 75%
+				bottom: 0
+				left: 45%
+
+		.feature-card
+			display: grid
+			grid-template-columns: 1fr
+			grid-template-rows: repeat(2, 1fr)
+			width: 100%
+
+			text-align: center
+			
+			&-img
+				float: none
+				justify-self: center
+
+			&-content
+				display: block
+
+			&-text
+				margin-top: 10px
+
+		.menu
+			ul
+				width: 320px
+
+		.btn-top
+			right: 1%
+
+		.features-content
+			grid-column-gap: 8px
+
+
+@media screen and (min-width: 576px) and (max-width: 767px)
+	.container
+		margin:  
+			left: 10%
+			right: 10%
+
+	#scrn-img-text
+		display: none
+
+	#screenshot-text2
+		display: none
+
+	.slider-img
+		width: 120px
+
+	.active
+		width: 170px
+
+	.menu
+		ul
+			width: 280px
+
+@media screen and (max-width: 576px)
+	.container
+		margin: 0
+
+	#scrn-img-text
+		display: none
+
+	#screenshot-text2
+		display: none
+
+	
