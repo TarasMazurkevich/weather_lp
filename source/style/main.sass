@@ -117,6 +117,12 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 		&-first
 			left: 10%
 
+	.slide-menu
+		display: none
+
+	.burger
+			display: none
+
 @media screen and (min-width: 768px) and (max-width: 991px)
 	.container
 		margin:  
@@ -134,12 +140,24 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 			width: 420px
 			font-size: 14px
 
+	.slide-menu
+		display: none
+
+	.burger
+			display: none
+
 	@media screen and (min-width: 768px) and (max-width: 940px)
 		.slider-img
 			width: 150px
 
 		.active
 			width: 200px
+
+		.slide-menu
+			display: none
+
+		.burger
+			display: none
 	
 	@media screen and (min-width: 768px) and (max-width: 850px)
 		.screenshots-img--bbl
@@ -181,6 +199,12 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 		.features-content
 			grid-column-gap: 8px
 
+		.slide-menu
+			display: none
+
+		.burger
+			display: none
+
 
 @media screen and (min-width: 576px) and (max-width: 767px)
 	.container
@@ -202,7 +226,74 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 
 	.menu
 		ul
-			width: 280px
+			width: 320px
+
+	.cont-mobile
+		margin: 0
+	
+	.head
+		.nav
+			background-color: #353854
+
+			.menu
+				display: none
+			.social-block
+				display: none
+
+		.menu-mobile
+			grid-template-columns: repeat(2, 1fr)
+			
+			.logo-mobile
+				margin-left: 2%
+
+
+			.burger
+				justify-self: end
+				margin-right: 2%
+
+				#burger
+					display: none
+
+	.nav-mobile
+		z-index: 10
+
+		position: absolute
+		width: 100%
+
+		background-color: #353854
+
+	.slide-menu
+		display: grid
+		grid-template-rows: repeat(2, 1fr)
+		grid-template-columns: 20%
+		grid-row-gap: 20px
+		justify-content: center
+
+		width: 100%
+
+	.slide-menu--menu
+		ul
+			display: grid
+			grid-template-rows: repeat(4, 1fr)
+			grid-row-gap: 15px
+			text-align: center
+
+			a
+				color: $white
+				text-decoration: none
+
+	.slide-menu--social-block
+		display: grid
+		align-items: center
+
+		ul
+			display: grid
+			grid-auto-flow: column
+			grid-template-columns: repeat(3, 1fr)
+
+			a
+				justify-self: center
+				color: $white
 
 @media screen and (max-width: 576px)
 	.container

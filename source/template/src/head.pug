@@ -1,7 +1,7 @@
 section(id="head" class="head" name="head")
-	.container
-		nav.nav
-			h2.logo fun weather.
+	.container.cont-mobile
+		nav.nav.menu-mobile
+			h2.logo.logo-mobile fun weather.
 			menu.menu
 				ul
 					a(href="#head" data-target="anchor")
@@ -16,13 +16,41 @@ section(id="head" class="head" name="head")
 				ul
 					a(href="")
 						li(type="none" class="social-block_li")
-							span(class="fa fa-facebook fa-lg" aria-hidden="true")
+							span(class="fab fa-facebook-f fa-lg" aria-hidden="true")
 					a(href="")
 						li(type="none" class="social-block_li")
-							span(class="fa fa-twitter fa-lg" aria-hidden="true")
+							span(class="fab fa-twitter fa-lg" aria-hidden="true")
 					a(href="")
 						li(type="none" class="social-block_li")
-							span(class="fa fa-vk fa-lg" aria-hidden="true")
+							span(class="fab fa-vk fa-lg" aria-hidden="true")
+			.burger
+				span(class="fas fa-bars fa-lg" id="burger" aria-hidden="true")
+				span(class="fas fa-times fa-lg" id="closed-burger" aria-hidden="true")
+	.container.cont-mobile
+		nav.nav-mobile
+			.slide-menu
+				menu.slide-menu--menu
+					ul
+						a(href="#head" data-target="anchor")
+							li(type="none" class="menu_li") home
+						a(href="#feature" data-target="anchor")
+							li(type="none" class="menu_li") feature
+						a(href="#screenshots" data-target="anchor")
+							li(type="none" class="menu_li") reviews
+						a(href="#download" data-target="anchor")
+							li(type="none" class="menu_li") download
+				.slide-menu--social-block
+					ul
+						a(href="")
+							li(type="none" class="social-block_li")
+								span(class="fab fa-facebook-f fa-lg" aria-hidden="true")
+						a(href="")
+							li(type="none" class="social-block_li")
+								span(class="fab fa-twitter fa-lg" aria-hidden="true")
+						a(href="")
+							li(type="none" class="social-block_li")
+								span(class="fab fa-vk fa-lg" aria-hidden="true")
+	.container.cont-mobile-m
 		article.article
 			.left-card
 				.card
@@ -32,7 +60,7 @@ section(id="head" class="head" name="head")
 					a(href="#" class="btn") download
 					a(href="#" class="btn") feature
 			a(href="#feature" data-target="anchor" class="slide-down")
-				span(class="fa fa-angle-down" aria-hidden="true")
+				span(class="fas fa-angle-down" aria-hidden="true")
 			.right-card
 				.bbl-card.bbl-card-first sunny
 				.bbl-card.bbl-card-second 9˚
