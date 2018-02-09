@@ -97,6 +97,13 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 @import sass/footer
 
 
+@media screen and (min-width: 1200px)
+	.slide-menu
+		display: none
+
+	.burger
+		display: none
+
 @media screen and (min-width: 992px) and (max-width: 1200px)
 	.container
 		margin:  
@@ -121,7 +128,7 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 		display: none
 
 	.burger
-			display: none
+		display: none
 
 @media screen and (min-width: 768px) and (max-width: 991px)
 	.container
@@ -252,6 +259,7 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 				margin-right: 2%
 
 				#burger
+				#closed-burger
 					display: none
 
 	.nav-mobile
@@ -263,7 +271,7 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 		background-color: #353854
 
 	.slide-menu
-		display: grid
+		display: none
 		grid-template-rows: repeat(2, 1fr)
 		grid-template-columns: 20%
 		grid-row-gap: 20px
@@ -294,6 +302,69 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 			a
 				justify-self: center
 				color: $white
+
+	.feature-card
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(2, 1fr)
+		width: 100%
+
+		text-align: center
+		
+		&-img
+			float: none
+			justify-self: center
+
+		&-content
+			display: block
+
+		&-text
+			margin-top: 10px
+		
+	.head-phone
+		margin: 0
+
+	.bbl-card-first
+		left: -10%
+
+	.bbl-card-fourth
+		left: 25%
+
+	.screenshots-img--bbl
+		display: none
+
+	.screenshots-block:nth-of-type(2)
+		grid-column-gap: 40px
+
+@media screen and (min-width: 576px) and (max-width: 657px)
+	.bbl-card-first
+		display: none
+
+	.bbl-card-second
+		display: none
+
+	.bbl-card-third
+		display: none
+
+	.bbl-card-fourth
+		display: none
+
+	.head-phone
+		position: relative
+		top: 10%
+
+	.slider-img
+		width: 100px
+
+	.active
+		width: 150px
+
+	.widget-article
+		span
+			font-size: 30px
+
+	.screenshots-block:nth-of-type(2)
+		grid-column-gap: 0
 
 @media screen and (max-width: 576px)
 	.container
