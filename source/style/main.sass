@@ -374,14 +374,210 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 		top: 85%
 		border: .5px solid black
 
+	.footer
+		.social-block
+			a
+				font-size: 12px	
+
 @media screen and (max-width: 576px)
 	.container
-		margin: 0
+		margin:  
+			left: 2%
+			right: 2%
 
 	#scrn-img-text
 		display: none
 
 	#screenshot-text2
 		display: none
+
+	.slider-img
+		width: 120px
+
+	.active
+		width: 170px
+
+	.menu
+		ul
+			width: 320px
+
+	.cont-mobile
+		margin: 0
+	
+	.head
+		.nav
+			background-color: #353854
+
+			.menu
+				display: none
+			.social-block
+				display: none
+
+		.menu-mobile
+			grid-template-columns: repeat(2, 1fr)
+			
+			.logo-mobile
+				margin-left: 2%
+
+
+			.burger
+				justify-self: end
+				margin-right: 2%
+
+				#burger
+				#closed-burger
+					display: none
+
+		.article
+			height: 450px
+
+		.card-title
+			font-size: 30px
+
+		.card-text
+			font-size: 12px
+
+		.btn-group
+			margin-top: 20px
+
+			a
+				width: 80px
+				height: 30px
+
+	.nav-mobile
+		z-index: 10
+
+		position: absolute
+		width: 100%
+
+		background-color: #353854
+
+	.slide-menu
+		display: none
+		grid-template-rows: repeat(2, 1fr)
+		grid-template-columns: 20%
+		grid-row-gap: 20px
+		justify-content: center
+
+		width: 100%
+
+	.slide-menu--menu
+		ul
+			display: grid
+			grid-template-rows: repeat(4, 1fr)
+			grid-row-gap: 15px
+			text-align: center
+
+			a
+				color: $white
+				text-decoration: none
+
+	.slide-menu--social-block
+		display: grid
+		align-items: center
+
+		ul
+			display: grid
+			grid-auto-flow: column
+			grid-template-columns: repeat(3, 1fr)
+
+			a
+				justify-self: center
+				color: $white
+
+	.features-content
+		grid-column-gap: 5px
+
+	.feature-card
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(2, 1fr)
+		width: 100%
+
+		text-align: center
+		
+		&-img
+			float: none
+			justify-self: center
+
+			width: 65px
+
+		&-content
+			display: block
+
+		&-title
+			font-size: 18px
+
+		&-text
+			margin-top: 10px
+			font-size: 12px
+	
+	.right-card
+		display: grid
+
+	.head-phone
+		margin: 0
+		width: 170px
+		height: 350px
+		justify-self: end
+
+	.bbl-card-first
+		left: -10%
+
+	.bbl-card-fourth
+		left: 25%
+
+	.screenshots-img--bbl
+		display: none
+
+	.screenshots-block:nth-of-type(2)
+		grid-column-gap: 40px
+
+	#scrn-img-text
+		display: none
+
+	#screenshot-text2
+		display: none
+
+	.bbl-card-first
+		display: none
+
+	.bbl-card-second
+		display: none
+
+	.bbl-card-third
+		display: none
+
+	.bbl-card-fourth
+		display: none
+
+	.head-phone
+		position: relative
+		top: 5%
+
+	.slider-img
+		width: 100px
+
+	.active
+		width: 150px
+
+	.widget-article
+		span
+			font-size: 30px
+
+	.screenshots-block:nth-of-type(2)
+		grid-column-gap: 0
+
+	.left-card
+		margin-top: 80px
+
+	.slide-down
+		top: 85%
+		border: .5px solid black
+
+	.footer
+		.social-block
+			a
+				font-size: 12px
 
 	
