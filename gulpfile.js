@@ -42,12 +42,11 @@ var path = {
 };
 
 
-
 /* ------------ HTML build ------------- */
 gulp.task('html:build', function buildHTML() {
 	return gulp.src(path.src.template)
-		.pipe(pug())
-		.pipe(gulp.dest(path.build.html))
+        .pipe(pug())
+        .pipe(gulp.dest(path.build.html))
         .pipe(browserSync.reload({stream: true}));
 });
 

@@ -391,12 +391,6 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 	#screenshot-text2
 		display: none
 
-	.slider-img
-		width: 120px
-
-	.active
-		width: 170px
-
 	.menu
 		ul
 			width: 320px
@@ -580,4 +574,32 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 			a
 				font-size: 12px
 
-	
+	.screenshots-card
+		&--title
+			font-size: 20px
+		&--text
+			font-size: 14px
+	footer
+		.container
+			margin: 0
+		.nav
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(2, 1fr)
+			grid-row-gap: 20px
+			a
+				font-size: 12px
+
+			.social-block
+				grid-column: 1/3
+				a
+					font-size: 8px
+
+			.footer-bottom-text
+				p
+					font-size: 6px
+
+	.slider-img
+		width: 80px
+
+	.active
+		width: 100px
