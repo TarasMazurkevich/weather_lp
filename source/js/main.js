@@ -10,12 +10,38 @@ $(window).on('load', function () {
 });
 
 
+// phone and tablet - slide menu
+$('#burger').on('click', function (){
+	var burger = $('#burger'),
+		closeBurger = $('#closed-burger'),
+		menuMobile = $('.slide-menu');
+	burger.css({'display': 'none'});
+	closeBurger.css({'display' : 'block'});
+	menuMobile.slideDown('slow');
+});
+
+$('#closed-burger').on('click', function (){
+	var burger = $('#burger'),
+		closeBurger = $('#closed-burger'),
+		menuMobile = $('.slide-menu');
+	closeBurger.css({'display' : 'none'});
+	burger.css({'display': 'block'});
+	menuMobile.slideUp('slow');
+});
+
+
 // Back to Top - btn
 var btnTop = $('.btn-top');
 
 $(window).on('scroll', function(){
+	var burger = $('#burger'),
+		closeBurger = $('#closed-burger'),
+		menuMobile = $('.slide-menu');
 	if($(window).scrollTop() >= $('.head').height() / 2){
 		btnTop.fadeIn('slow');
+		closeBurger.css({'display' : 'none'});
+		burger.css({'display': 'block'});
+		menuMobile.slideUp('slow');
 	} else {
 		btnTop.fadeOut('slow');
 	};

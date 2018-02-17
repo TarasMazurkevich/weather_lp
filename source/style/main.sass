@@ -294,6 +294,7 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 	.slide-menu--social-block
 		display: grid
 		align-items: center
+		margin: 40px 0
 
 		ul
 			display: grid
@@ -338,6 +339,9 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 		grid-column-gap: 40px
 
 @media screen and (min-width: 576px) and (max-width: 657px)
+	.slide-menu--social-block
+		margin: 40px 0
+
 	.bbl-card-first
 		display: none
 
@@ -380,6 +384,8 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 				font-size: 12px	
 
 @media screen and (min-width: 456px) and (max-width: 576px)
+	.slide-menu--social-block
+		margin: 40px 0
 	.features, .screenshots, .comments, .download, .widget-article, .comments-article
 		margin-top: 50px
 
@@ -606,9 +612,11 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 
 	.active
 		width: 100px
+@media screen and (min-width: 1px) and (max-width: 456px)
+	.slide-menu--social-block
+		margin: 40px 0
 
-@media screen and (max-width: 456px)
-	.features, .screenshots, .comments, .download, .widget-article, .comments-article
+	.features, .screenshots, .comments, .download, .widget-article
 		margin-top: 20px
 	.features-article
 		margin-top: 50px
@@ -764,9 +772,6 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 	.screenshots-img--bbl
 		display: none
 
-	.screenshots-block:nth-of-type(2)
-		grid-column-gap: 40px
-
 	#scrn-img-text
 		display: none
 
@@ -797,16 +802,26 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 
 
 	.widget-article
-		grid-template-columns: 1fr 3fr 1fr
+		grid-template-columns: 20px 1fr 20px
+		.widget-slider
+			height: 280px
+			margin: 50px 0
 		span
 			font-size: 20px
 
 	.screenshots-block
 		grid-template-columns: 1fr
-		geight: auto
+		height: auto
 
 	.screenshots-block:nth-of-type(2)
 		grid-column-gap: 0
+		.screenshots-content
+			display: grid
+			img, div
+				justify-self: end
+			.screenshots-card
+				text-align: end
+
 
 	.left-card
 		margin-top: 20px
@@ -832,13 +847,26 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 			font-size: 20px
 		&--text
 			font-size: 14px
+
+	.footer
+		height: auto
+		grid-template-rows: repeat(2, 1fr)
+
 	footer
 		.container
 			margin: 0
+		.container:nth-of-type(2)
+			display: none
 		.nav
-			grid-template-columns: repeat(2, 1fr)
+			grid-template-columns: 1fr 3fr
 			grid-template-rows: repeat(2, 1fr)
 			grid-row-gap: 20px
+			height: auto
+			margin-top: 20px
+
+			ul
+				width: auto
+
 			a
 				font-size: 12px
 
@@ -847,9 +875,14 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 				a
 					font-size: 8px
 
-			.footer-bottom-text
-				p
-					font-size: 6px
+		.footer-bottom-text
+			display: grid
+			p
+				justify-self: center
+				font-size: 10px
+
+		hr
+			display: none
 
 	.slider-img
 		width: 80px
@@ -862,3 +895,28 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 
 	.screenshots-content
 		height: auto
+
+	.screenshots-article
+		margin-top: 80px
+
+	.comments-article
+		grid-template-rows: repeat(4, 1fr)
+		grid-template-columns: none
+		grid-column-gap: 0
+		grid-row-gap: 20px
+
+	.download-article
+		grid-template-columns: none
+		.download-block:nth-of-type(2)
+			display: none
+
+	@media screen and (min-width: 1px) and (max-width: 376px)
+		.slide-menu--social-block
+			margin: 40px 0
+		.slider-img
+			width: 70px
+		.active
+			width: 90px
+
+		.download-block--text
+			width: auto
