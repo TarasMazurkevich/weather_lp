@@ -379,7 +379,10 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 			a
 				font-size: 12px	
 
-@media screen and (max-width: 576px)
+@media screen and (min-width: 456px) and (max-width: 576px)
+	.features, .screenshots, .comments, .download, .widget-article, .comments-article
+		margin-top: 50px
+
 	.container
 		margin:  
 			left: 2%
@@ -603,3 +606,259 @@ html, body, li, ul, menu, h1, h2, h3, h4, h5, h6, label, input, hr, p
 
 	.active
 		width: 100px
+
+@media screen and (max-width: 456px)
+	.features, .screenshots, .comments, .download, .widget-article, .comments-article
+		margin-top: 20px
+	.features-article
+		margin-top: 50px
+
+	.container
+		margin:  
+			left: 2%
+			right: 2%
+
+	#scrn-img-text
+		display: none
+
+	#screenshot-text2
+		display: none
+
+	.menu
+		ul
+			width: 320px
+
+	.cont-mobile
+		margin: 0
+	
+	.head
+		height: auto
+		.nav
+			background-color: #353854
+
+			.menu
+				display: none
+			.social-block
+				display: none
+
+		.menu-mobile
+			grid-template-columns: repeat(2, 1fr)
+			
+			.logo-mobile
+				margin-left: 2%
+
+
+			.burger
+				justify-self: end
+				margin-right: 2%
+
+				#burger
+				#closed-burger
+					display: none
+
+		.article
+			height: auto
+			grid-template-columns: none
+			grid-template-rows: 3fr 1fr
+
+		.card-title
+			font-size: 30px
+
+		.card-text
+			font-size: 12px
+
+		.btn-group
+			margin-top: 20px
+
+			a
+				width: 80px
+				height: 30px
+
+	.nav-mobile
+		z-index: 10
+
+		position: absolute
+		width: 100%
+
+		background-color: #353854
+
+	.slide-menu
+		display: none
+		grid-template-rows: repeat(2, 1fr)
+		grid-template-columns: 20%
+		grid-row-gap: 20px
+		justify-content: center
+
+		width: 100%
+
+	.slide-menu--menu
+		ul
+			display: grid
+			grid-template-rows: repeat(4, 1fr)
+			grid-row-gap: 15px
+			text-align: center
+
+			a
+				color: $white
+				text-decoration: none
+
+	.slide-menu--social-block
+		display: grid
+		align-items: center
+
+		ul
+			display: grid
+			grid-auto-flow: column
+			grid-template-columns: repeat(3, 1fr)
+
+			a
+				justify-self: center
+				color: $white
+
+	.features-content
+		grid-row-gap: 20px
+		grid-template-columns: none
+		grid-template-rows: repeat(2, 1fr)
+
+	.feature-card
+		display: grid
+		grid-template-columns: none
+		grid-template-rows: repeat(2, 1fr)
+		width: 100%
+
+		text-align: center
+		
+		&-img
+			float: none
+			justify-self: center
+
+			width: 65px
+
+		&-content
+			display: block
+			width: 50%
+			justify-self: center
+
+		&-title
+			font-size: 18px
+
+		&-text
+			margin-top: 10px
+			font-size: 12px
+	
+	.right-card
+		display: none
+
+	.head-phone
+		margin: 0
+		width: 170px
+		height: 350px
+		justify-self: end
+
+	.bbl-card-first
+		left: -10%
+
+	.bbl-card-fourth
+		left: 25%
+
+	.screenshots-img--bbl
+		display: none
+
+	.screenshots-block:nth-of-type(2)
+		grid-column-gap: 40px
+
+	#scrn-img-text
+		display: none
+
+	#screenshot-text2
+		display: none
+
+	.bbl-card-first
+		display: none
+
+	.bbl-card-second
+		display: none
+
+	.bbl-card-third
+		display: none
+
+	.bbl-card-fourth
+		display: none
+
+	.head-phone
+		position: relative
+		top: 5%
+
+	.slider-img
+		width: 100px
+
+	.active
+		width: 150px
+
+
+	.widget-article
+		grid-template-columns: 1fr 3fr 1fr
+		span
+			font-size: 20px
+
+	.screenshots-block
+		grid-template-columns: 1fr
+		geight: auto
+
+	.screenshots-block:nth-of-type(2)
+		grid-column-gap: 0
+
+	.left-card
+		margin-top: 20px
+
+		.card-title
+			font-size: 40px
+		.card-text
+			font-size: 16px
+
+	.slide-down
+		margin-top: 20px
+		border: .5px solid black
+		justify-self: center
+		align-self: end
+
+	.footer
+		.social-block
+			a
+				font-size: 12px
+
+	.screenshots-card
+		&--title
+			font-size: 20px
+		&--text
+			font-size: 14px
+	footer
+		.container
+			margin: 0
+		.nav
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(2, 1fr)
+			grid-row-gap: 20px
+			a
+				font-size: 12px
+
+			.social-block
+				grid-column: 1/3
+				a
+					font-size: 8px
+
+			.footer-bottom-text
+				p
+					font-size: 6px
+
+	.slider-img
+		width: 80px
+
+	.active
+		width: 100px
+
+	.screenshots-img
+		display: none
+
+	.screenshots-content
+		height: auto
